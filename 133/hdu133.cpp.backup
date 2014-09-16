@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+
+
+int main(){
+  int C,n;
+  int num[10];
+  cin>>C;
+  while(C--){
+    cin>>n;
+    int i,j;
+    for(i=0;i<n;i++){
+      cin>>num[i];
+    }
+    int t;
+    for(i=0;i<n;i++){
+      for(j=i;j<n-1;j++){
+        if(num[j] > num[j+1]){
+          t = num[j];
+          num[j] = num[j+1];
+          num[j+1] = t;
+        }
+
+      }
+
+    }
+    cout<<num[1]<<endl;
+
+  }
+
+  return 0;
+}
